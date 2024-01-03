@@ -13,6 +13,9 @@ import pri.computerstore.service.impl.AdminServiceImpl;
 import pri.computerstore.service.impl.HardwareServiceImpl;
 import pri.computerstore.service.impl.UserServiceImpl;
 import pri.computerstore.util.JDBCUtils;
+import pri.computerstore.model.UserRole;
+import pri.computerstore.model.Hardware;
+import pri.computerstore.model.User;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -53,3 +56,4 @@ public class Main {
             e.printStackTrace();
         }
     }
+}

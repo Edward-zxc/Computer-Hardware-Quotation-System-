@@ -5,8 +5,8 @@ package pri.computerstore.model;
  */
 public class Hardware {
     private int id;
-    private String name;
-    private double price;
+    private static String name;
+    private static double price;
     public Hardware() {
         // 默认构造函数
     }
@@ -24,7 +24,7 @@ public class Hardware {
         this.id = id;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
@@ -32,7 +32,7 @@ public class Hardware {
         this.name = name;
     }
 
-    public double getPrice() {
+    public static double getPrice() {
         return price;
     }
 
