@@ -540,16 +540,24 @@ public class ProViews {
     }
 
     private void deposit() {
-        System.out.println("您当前账户余额：" + users.getUscore());
-        System.out.println("请输入您的存款金额：");
-        double money = in.nextDouble();
-        if (money < 0 || money >= 200000) {
-            System.out.println("非法数字，请重新输入！");
-            deposit();
-        } else {
-            users.setUscore(users.getUscore() + money);
-            int rows = usersDao.updateUsers(users);
-            System.out.println(rows != -1 ? "存款成功！" : "存款失败，请联系管理员！");
+        if (users == null) {
+            System.out.println("错误：Users 对象为 null。请在调用 deposit 之前初始化它。");
+            return;
+        }
+
+        while (true) {
+            System.out.println("您当前账户余额：" + users.getUscore());
+            System.out.println("请输入您的存款金额：");
+            double money = in.nextDouble();
+
+            if (money < 0 || money >= 200000) {
+                System.out.println("非法数字，请重新输入！");
+            } else {
+                users.setUscore(users.getUscore() + money);
+                int rows = usersDao.updateUsers(users);
+                System.out.println(rows != -1 ? "存款成功！" : "存款失败，请联系管理员！");
+                break;  // 跳出循环，表示成功存款
+            }
         }
     }
 
