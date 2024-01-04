@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="libs">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/CQS/src/pri/computerstore/model/libs" />
+      <root url="file://$PROJECT_DIR$/src/out/production/jdbc-test-master/com/jdbc/libs" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
-    <jarDirectory url="file://$PROJECT_DIR$/CQS/src/pri/computerstore/model/libs" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/src/out/production/jdbc-test-master/com/jdbc/libs" recursive="false" />
   </library>
 </component>
